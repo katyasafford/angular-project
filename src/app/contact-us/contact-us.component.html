@@ -1,3 +1,20 @@
-<p>
-  contact-us works!
-</p>
+<mat-card class="custom-card">
+  <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="onFormSubmit()">
+    <div class="form-content-wrapper">
+      <mat-form-field class="contact-input">
+        <input matInput
+               placeholder="Enter your name..."
+               formControlName="username"
+               [(ngModel)]="enteredUsername"
+               (input)="checkTextareaDisabledState()">
+      </mat-form-field>
+      <mat-form-field class="contact-input">
+        <textarea matInput
+                  placeholder="Type your message here..."
+                  formControlName="message">
+        </textarea>
+      </mat-form-field>
+      <button mat-button class="btn">SEND</button>
+    </div>
+  </form>
+</mat-card>
