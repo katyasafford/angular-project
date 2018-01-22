@@ -14,7 +14,17 @@
                   formControlName="message">
         </textarea>
       </mat-form-field>
-      <button mat-button class="btn">SEND</button>
+      <!-- <button (click)="increment()">+</button>
+      <input matInput
+             type="text"
+             formControlName="importance">
+      <button (click)="decrement()">-</button> -->
+      <!-- <app-importance formControlName="importance"></app-importance> -->
+      <button mat-button class="btn" type="submit">SEND</button>
     </div>
+
   </form>
+
+  <pre>{{ form.value | json }}</pre>
+
 </mat-card>
