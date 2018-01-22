@@ -1,0 +1,12 @@
+img {
+  width: 500px;
+}
+
+.product-card {
+  margin: 20px;
+}
+
+.products-wrapper {
+  width: 50%;
+  margin: 0 auto;
+}

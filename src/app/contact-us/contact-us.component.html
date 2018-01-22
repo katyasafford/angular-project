@@ -14,7 +14,24 @@
                   formControlName="message">
         </textarea>
       </mat-form-field>
-      <button mat-button class="btn">SEND</button>
+      <button mat-button
+              type="button"
+              class="counter-btn"
+              (click)="increase()">
+              +
+      </button>
+      <input type="text" formControlName="importance" matInput class="counter">
+      <button mat-button
+              type="button"
+              class="counter-btn"
+              (click)="decrease()">
+              -
+      </button>
+      <button mat-button class="btn" type="submit" [disabled]="!contactForm.valid">SEND</button>
     </div>
   </form>
+
+  <!-- <span *ngIf="!contactForm.valid && contactForm.get('message').touched">The form is not valid</span> -->
+  <!-- <span *ngIf="contactForm.get('importance').errors['isEvenForbidden']">The counter can't be even</span> -->
+
 </mat-card>

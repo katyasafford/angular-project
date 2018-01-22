@@ -10,3 +10,19 @@
 .btn {
   background-color: #96beff;
 }
+
+.counter-btn {
+  background-color: #c9cdd3;
+  min-width: 40px;
+}
+
+.counter {
+  display: inline;
+  width: 20px;
+  margin: 0 0 0 10px;
+}
+
+button[type='submit'] {
+  display: block;
+  margin-top: 15px;
+}

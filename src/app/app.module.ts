@@ -10,7 +10,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { AppMaterialModule } from './app-material';
-import { ImportanceComponent } from './importance/importance.component';
+//import { ImportanceComponent } from './importance/importance.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { ImportanceComponent } from './importance/importance.component';
     HomeComponent,
     ContactUsComponent,
     HeaderComponent,
-    ImportanceComponent
+    //ImportanceComponent
   ],
   imports: [
     BrowserModule,
