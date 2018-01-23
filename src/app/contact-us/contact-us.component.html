@@ -17,14 +17,16 @@
       <button mat-button
               type="button"
               class="counter-btn"
-              (click)="increase()">
+              (click)="increase()"
+              id="plus-btn">
               +
       </button>
       <input type="text" formControlName="importance" matInput class="counter">
       <button mat-button
               type="button"
               class="counter-btn"
-              (click)="decrease()">
+              (click)="decrease()"
+              id="minus-btn">
               -
       </button>
       <button mat-button class="btn" type="submit" [disabled]="!contactForm.valid">SEND</button>

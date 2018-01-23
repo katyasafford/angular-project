@@ -1,6 +1,13 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
+export function evenValidator(control: FormControl): {[s: string]: boolean} {
+  if (this.counterValue % 2 == 0) {
+    return { 'isEvenForbidden': true }
+  }
+  return null;
+}
+
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
@@ -17,7 +24,7 @@ export class ContactUsComponent implements OnInit {
     this.contactForm = new FormGroup({
       'username': new FormControl(null, Validators.required),
       'message': new FormControl({ value: null, disabled: true }, [Validators.required]),
-      'importance': new FormControl(1, this.evenValidator.bind(this))
+      'importance': new FormControl(1, evenValidator.bind(this))
     });
   }
 
@@ -31,13 +38,6 @@ export class ContactUsComponent implements OnInit {
 
   onFormSubmit() {
     console.log(this.contactForm);
-  }
-
-  evenValidator(control: FormControl): {[s: string]: boolean} {
-    if (this.counterValue % 2 == 0) {
-      return { 'isEvenForbidden': true }
-    }
-    return null;
   }
 
   patchFormValue() {
