@@ -30,7 +30,6 @@ describe('ContactUsComponent', () => {
     fixture = TestBed.createComponent(ContactUsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-    //component.ngOnInit();
   });
 
   it('should increase counter value when + button is clicked', () => {
